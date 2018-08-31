@@ -1,0 +1,111 @@
+{
+    "fields":
+    {
+    	"滑坡灾害点野外调查表":{},
+    	"tablename":{"cssText":"display: none;"},
+		"野外编号":{"inline": true,"width":"100%","required": true,"labelCssText":"color:#FF0000"},
+    	"统一编号":{"inline": true,"width":"100%","required": true,"labelCssText":"color:#FF0000"},
+		"名称":{"inline":true,"width":"100%"},
+		"地理位置":{"inline":true,"width":"100%"},
+    	"滑坡年代":{"inline": true,"width":"100%","type": "radio","datalist": ["古滑坡", "老滑坡", "新滑坡"]},
+		"发生时间":{"inline": true,"width":"100%","type":"date"},
+		"经度":{"inline":true,"width":"100%"},
+		"纬度":{"inline":true,"width":"100%"},
+		"标高(m)":{"inline":true,"width":"100%"},
+		"坡顶":{"inline":true,"width":"100%"},
+		"坡脚":{"inline":true,"width":"100%"},
+		
+		"滑坡类型":{"inline":true,"width":"100%","type": "checkbox","datalist": ["崩塌", "倾倒", "滑动","侧向扩离", "流动", "复合"]},
+		"滑体性质":{"inline":true,"width":"100%","type": "checkbox","datalist": ["岩质", "碎块石", "土质"]},
+		
+			"地层时代":{"inline":true,"width":"100%"},
+			"地层岩性":{"inline":true,"width":"100%"},
+			"地层产状":{"inline":true,"width":"100%"},
+			"构造部位":{"inline":true,"width":"100%"},
+			"地震烈度":{"inline":true,"width":"100%"},
+			"微地貌":{"inline":true,"width":"100%","type": "checkbox","datalist": ["陡崖", "陡坡", "缓坡","平台"]},
+			"地下水类型":{"inline":true,"width":"100%","type": "checkbox","datalist": ["孔隙水", "裂隙水", "岩溶水","潜水","承压水","上层滞水"]},
+			
+			"年均降水量(mm)":{"inline":true,"width":"100%"},
+			"日最大降水量(mm)":{"inline":true,"width":"100%"},
+			"时最大降水量(mm)":{"inline":true,"width":"100%"},
+			"洪水位(m)":{"inline":true,"width":"100%"},
+			"枯水位(m)":{"inline":true,"width":"100%"},
+			"滑坡相对河流位置":{"inline":true,"width":"100%","type": "checkbox","datalist": ["左", "右", "凹","凸"]},
+			
+			"坡高(m)":{"inline":true,"width":"100%"},
+			"斜坡坡度(°)":{"inline":true,"width":"100%"},
+			"坡形":{"inline":true,"width":"100%","type": "checkbox","datalist": ["凸形", "凹形", "平直","阶状"]},
+			"斜坡结构类型":{"inline":true,"width":"100%"},
+			"类型":{"inline":true,"width":"100%"},
+			"产状":{"inline":true,"width":"100%"},
+			
+			"长度(m)":{"inline":true,"width":"100%"},
+			"宽度(m)":{"inline":true,"width":"100%"},
+			"厚度(m)":{"inline":true,"width":"100%"},
+			"面积(㎡)":{"inline":true,"width":"100%"},
+			"体积(m³)":{"inline":true,"width":"100%"},
+			"坡度(°)":{"inline":true,"width":"100%"},
+			"坡向(°)":{"inline":true,"width":"100%"},
+			"平面形态":{"inline":true,"width":"100%","type": "checkbox","datalist": ["半圆", "矩形", "舌形","不规则"]},
+			"剖面形态":{"inline":true,"width":"100%","type": "checkbox","datalist": ["凸形", "凹形", "直线","阶梯","复合"]},
+			
+			
+			"滑体岩性":{"inline":true,"width":"100%"},
+			"滑体结构":{"inline":true,"width":"100%","type": "checkbox","datalist": ["可辨层次", "零乱"]},
+			"滑体碎石含量(%)":{"inline":true,"width":"100%"},
+			"滑体体积百分比(%)":{"inline":true,"width":"100%"},
+			"滑体块度(cm)":{"inline":true,"width":"100%"},
+			"滑床岩性":{"inline":true,"width":"100%"},
+			"滑床时代":{"inline":true,"width":"100%"},
+			"滑床产状":{"inline":true,"width":"100%"},
+			
+			"形态":{"inline":true,"width":"100%"},
+			"埋深(m)":{"inline":true,"width":"100%"},
+			"倾向(°)":{"inline":true,"width":"100%"},
+			"倾角(°)":{"inline":true,"width":"100%"},
+			"结构厚度(m)":{"inline":true,"width":"100%"},
+			"滑带土名称":{"inline":true,"width":"100%"},
+			"滑带土性状":{"inline":true,"width":"100%"},
+			
+			"地下水埋深(m)":{"inline":true,"width":"100%"},
+			"露头":{"inline":true,"width":"100%","type": "checkbox","datalist": ["上升泉", "下降泉", "溢水点"]},
+			"补给类型":{"inline":true,"width":"100%","type": "checkbox","datalist": ["降雨", "地表水", "人工", "融雪"]},
+			"土地使用":{"inline":true,"width":"100%","type": "checkbox","datalist": ["旱地", "水田","草地","灌木","森林","裸露","建筑"]},
+			
+			"现今变形迹象":{"inline":true,"width":"100%","type": "checkbox","datalist": ["拉张裂缝", "剪切裂缝","地面隆起","剥、坠落", "树木歪斜","建筑变形","渗冒混水"]},
+			"变形部位":{"inline":true,"width":"100%"},
+			"变形特征":{"inline":true,"width":"100%"},
+			"初现时间":{"inline":true,"width":"100%","type":"date"},
+			
+			"地质因素":{"inline":true,"width":"100%","type": "checkbox","datalist": ["节理极度发育", "结构面走向与坡面平行","透水层下伏隔水层","土体/基岩接触", "破碎风化岩/基岩接触","强/弱风化层表格"]},
+			"地貌因素":{"inline":true,"width":"100%","type": "checkbox","datalist": ["斜坡陡峭", "坡脚遭侵蚀","超载堆积"]},
+			"物理因素":{"inline":true,"width":"100%","type": "checkbox","datalist": ["风化", "融冻","胀缩","孔隙水压力高","洪水冲蚀","水位陡降陡落","地震"]},
+			"人为因素":{"inline":true,"width":"100%","type": "checkbox","datalist": ["削坡过陡", "坡脚开挖","坡后加载","蓄水位降落","植被破坏","爆破振动","渠塘渗漏","灌溉渗漏"]},
+			"主导因素":{"inline":true,"width":"100%","type": "checkbox","datalist": ["暴雨", "地震","工程活动"]},
+			
+			"复活诱发因素":{"inline":true,"width":"100%","height":"200%","type": "checkbox","datalist": ["降雨", "地震","人工加载","开挖坡脚", "坡脚冲刷","坡脚浸润","坡体切割","风化","卸荷 ","动水压力","爆破振动"]},
+			"目前稳定状况":{"inline":true,"width":"100%","type": "checkbox","datalist": ["稳定", "基本稳定","不稳定"]},
+			"发展趋势分析":{"inline":true,"width":"100%","type": "checkbox","datalist": ["稳定", "基本稳定","不稳定"]},
+			
+			
+			"死亡人数":{"inline":true,"width":"100%"},
+			"损坏房屋":{"inline":true,"width":"100%"},
+			"毁路(m)":{"inline":true,"width":"100%"},
+			"毁渠(m)":{"inline":true,"width":"100%"},
+			"其它危害":{"inline":true,"width":"100%"},
+			"直接损失(万元)":{"inline":true,"width":"100%"},
+			"间接损失(万元)":{"inline":true,"width":"100%"},
+			"灾害类型":{"inline":true,"width":"100%"},
+			"波及范围":{"inline":true,"width":"100%"},
+			"造成损失":{"inline":true,"width":"100%"},
+			"责任单位":{"inline":true,"width":"100%"},
+			"分管部门":{"inline":true,"width":"100%"},
+			"监测建议":{"inline":true,"width":"100%","type": "checkbox","datalist": ["定期目视检查", "安装简易监测设施","地面位移监测","深部位移监测"]},
+			"防治建议":{"inline":true,"width":"100%","type": "checkbox","datalist": ["避让", "裂缝填埋","加强监测","地表排水","地下排水","削方减载","坡面防护","反压坡脚","支挡","锚固","灌浆","植树种","坡改梯","水改旱","减少振动"]},
+			
+			
+			"滑坡示意图":{"inline":true,"width":"100%","placeholder":"平面图,剖面图"}
+			
+    }
+}

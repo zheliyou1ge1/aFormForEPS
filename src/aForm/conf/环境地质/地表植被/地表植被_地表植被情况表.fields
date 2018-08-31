@@ -1,0 +1,21 @@
+{
+    "fields":
+    {
+    	"地表植被情况表":{},
+    	"tablename":{"cssText":"display: none;"},
+    	"统一编号":{"inline": true,"width":"100%","labelCssText":"color:#FF0000","required": true},
+    	"野外编号":{"inline": true,"width":"100%"},
+
+			"日期":{"inline":true,"width":"100%","type":"date"},
+			"记录人":{"inline":true,"width":"100%"},
+			"审核人":{"inline":true,"width":"100%"},
+			"项目负责人":{"inline":true,"width":"100%"},
+
+
+
+			"种类":{"inline":true,"width":"100%"},
+			"覆盖率":{"inline":true,"width":"100%"},
+			"退化情况":{"inline":true,"width":"100%"},
+			"其他":{"inline":true,"width":"100%"}
+	}
+}

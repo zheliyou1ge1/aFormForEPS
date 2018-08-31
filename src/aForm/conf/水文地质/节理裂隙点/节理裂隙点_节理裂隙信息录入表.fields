@@ -1,0 +1,14 @@
+{
+    "fields":
+    {
+    	"节理裂隙信息录入表":{},
+    	"tablename":{"cssText":"display: none;"},
+		"倾向":{"inline":true,"width":"100%"},
+		"倾角":{"inline":true,"width":"100%"},
+		"长度（m）":{"inline":true,"width":"100%"},
+		"宽度（mm）":{"inline":true,"width":"100%"},
+		"填充物":{"inline":true,"width":"100%","type": "checkbox","datalist": ["无", "粉质黏土", "粘土", "含碎石粉质粘土", "含角砾粉质粘土", "含碎石粘土", "含角砾粘土"]},
+		"裂面平整度":{"inline":true,"width":"100%","type":"radio","datalist": ["光滑", "粗糙", "平整", "不平整"]},
+		"裂隙状态":{"inline":true,"width":"100%","type":"radio","datalist": ["张开", "闭合"]}
+    }
+}

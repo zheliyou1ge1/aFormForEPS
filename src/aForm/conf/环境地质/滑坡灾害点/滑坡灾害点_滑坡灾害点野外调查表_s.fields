@@ -1,0 +1,19 @@
+{
+
+    "fields":
+
+    {
+		"滑坡灾害点野外调查表子表":{},
+		"tablename":{"cssText":"display: none;"},
+    	"分层编号":{"inline":true,"width":"100%","readonly": true,"labelCssText":"color:#FF0000"},
+		"层底深度(m)":{"inline":true,"width":"100%","labelCssText":"color:#FF0000"},
+		"层底标高(m)":{"inline":true,"width":"100%","labelCssText":"color:#FF0000"},
+		"单层厚度(m)":{"inline":true,"width":"100%","labelCssText":"color:#FF0000"},
+		"层底接触关系":{"inline":true,"width":"100%"},
+		"地层时代":{"inline":true,"width":"100%","labelCssText":"color:#FF0000"},
+		"层理构造":{"inline":true,"width":"100%"},
+		"地质描述":{"inline":true,"width":"100%"}
+    	
+    }
+
+}

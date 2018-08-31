@@ -1,0 +1,39 @@
+{
+    "fields":
+    {
+    	"水样采集记录表":{},
+    	"tablename":{"cssText":"display: none;"},
+    	"统一编号":{"inline": true,"width":"100%","labelCssText":"color:#FF0000","required": true},
+    	"样品编号":{"inline": true,"width":"100%"},
+
+			"日期":{"inline":true,"width":"100%","type":"date"},
+			"记录人":{"inline":true,"width":"100%"},
+			"审核人":{"inline":true,"width":"100%"},
+			"项目负责人":{"inline":true,"width":"100%"},
+
+
+
+			"地理位置":{"inline":true,"width":"100%"},
+			"X坐标":{"inline":true,"width":"100%","labelCssText":"color:#FF0000"},
+			"Y坐标":{"inline":true,"width":"100%","labelCssText":"color:#FF0000"},
+			"高程":{"inline":true,"width":"100%"},
+			"水点名称":{"inline":true,"width":"100%"},
+			"经度":{"inline":true,"width":"100%"},
+			"纬度":{"inline":true,"width":"100%"},
+			"取样深度（m）":{"inline":true,"width":"100%"},
+			"气温":{"inline":true,"width":"100%"},
+			"水温":{"inline":true,"width":"100%"},
+			"色度":{"inline":true,"width":"100%"},
+			"嗅和味":{"inline":true,"width":"100%"},
+			"混浊度":{"inline":true,"width":"100%"},
+			"pH":{"inline":true,"width":"100%"},
+			"地层时代":{"inline":true,"width":"100%"},
+			"地层岩性":{"inline":true,"width":"100%"},
+			"水源类型":{"inline":true,"width":"100%","placeholder":"地表水（水库，水潭，湖泊，河流，溪沟），地下水（孔隙水，岩溶水，碎屑岩裂隙水，火成岩裂隙水，变质岩裂隙水）"},
+			"水样分析种类":{"inline":true,"width":"100%"},
+			"化学处理方法":{"inline":true,"width":"100%"},	
+			"分析要求":{"inline":true,"width":"100%"},	
+			"录像照片":{"inline":true,"width":"100%"},	
+			"备注":{"inline":true,"width":"100%"}	
+    }
+}

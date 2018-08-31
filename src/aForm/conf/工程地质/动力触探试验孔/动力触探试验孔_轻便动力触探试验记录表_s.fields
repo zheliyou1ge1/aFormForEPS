@@ -1,0 +1,15 @@
+{
+    "fields":
+    {
+    	"轻便动力触探试验记录表子表":{},
+		"tablename":{"cssText":"display: none;"},
+    	"层号":{inline:true,"width":"100%"},
+		"土类":{inline:true,"width":"100%"},
+		"起点深度(m)":{inline:true,"width":"100%"},
+		"止点深度(m)":{inline:true,"width":"100%"},
+		"杆长(m)":{inline:true,"width":"100%"},
+		"实测击数（击）":{inline:true,"width":"100%"},
+		"修正系数α":{inline:true,"width":"100%"},
+		"修正击数（击）":{inline:true,"width":"100%"}
+    }
+}

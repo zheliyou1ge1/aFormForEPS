@@ -1,0 +1,40 @@
+{
+    "fields":
+    {
+    	"泉点记录表":{},
+    	"tablename":{"cssText":"display: none;"},
+    	"统一编号":{"inline": true,"width":"100%","labelCssText":"color:#FF0000","required": true},
+    	"野外编号":{"inline": true,"width":"100%"},
+			
+			"日期":{"inline":true,"width":"100%","type":"date"},
+			"记录人":{"inline":true,"width":"100%"},
+			"审核人":{"inline":true,"width":"100%"},
+			"项目负责人":{"inline":true,"width":"100%"},
+
+
+
+			"地理位置":{"inline":true,"width":"100%"},
+			"X坐标":{"inline":true,"width":"100%","labelCssText":"color:#FF0000","required": true},
+			"Y坐标":{"inline":true,"width":"100%","labelCssText":"color:#FF0000","required": true},
+			"高程":{"inline":true,"width":"100%","labelCssText":"color:#FF0000","required": true},
+			"经度":{"inline":true,"width":"100%"},
+			"纬度":{"inline":true,"width":"100%"},
+			"泉点类型":{"inline":true,"width":"100%","type": "radio","datalist": ["上升泉", "下降泉", "喷泉","侵蚀泉", "接触泉", "溢出泉", "悬挂泉", "断层泉","海底泉", "水下泉", "岩溶泉", "裂隙泉", "多潮泉","间歇泉", "季节泉", "长年泉", "全排泄型泉", "部分排泄型泉", "虹吸泉", "单泉", "泉群"]},
+			"泉流量（L/S）":{"inline":true,"width":"100%"},
+			"测流方法":{"inline":true,"width":"100%"},
+			"测流日期":{"inline":true,"width":"100%"},
+			"采样情况":{"inline":true,"width":"100%"},
+			"地下水类型":{"inline":true,"width":"100%","type": "checkbox","datalist": ["潜水", "承压水", "孔隙水", "裂隙水", "岩溶水"]},
+			"地貌成因类型":{"inline":true,"width":"100%","type": "checkbox","datalist": ["构造", "侵蚀", "剥蚀", "河流侵蚀堆积", "河流堆积", "岩溶", "人工地貌", "构造地貌", "重力地貌"]},
+			"地貌形态":{"inline":true,"width":"100%","type": "radio","datalist": ["漫滩", "阶地", "岗地","丘陵", "低山", "中山", "古河道", "河湖","渠道", "堤防", "台地", "桌状山", "河谷","漫滩", "残丘", "陡崖", "悬崖", "冲积扇", "夷平面", "石林", "峰丛", "峰林", "孤峰"]},
+			"地貌与新构造运动关系":{"inline":true,"width":"100%"},
+			"地层及岩性描述":{"inline":true,"width":"100%"},
+			"节理裂隙描述":{"inline":true,"width":"100%"},
+			"节理裂隙相互关系":{"inline":true,"width":"100%"},
+			"物理地质现象":{"inline":true,"width":"100%","placeholder":"描述崩塌、滑坡、危岩、泥石流、岩溶塌陷、地面沉陷、采空区、填土沉陷等"},
+			"沿途观察记录":{"inline":true,"width":"100%"},
+			"地质剖面素描":{"inline":true,"width":"100%"},
+			"照片录像":{"inline":true,"width":"100%"}
+		
+    }
+}

@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<META HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+	<META HTTP-EQUIV="expires" CONTENT="0">
+
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<title></title>
+	<style>
+		::-webkit-scrollbar {display:none}
+
+		/*让网页中的内容不可选择*/
+		*{
+			moz-user-select: -moz-none;
+			-moz-user-select: none;
+			-o-user-select:none;
+			-khtml-user-select:none;
+			/*-webkit-user-select:none;*/
+			-ms-user-select:none;
+			user-select:none;
+		}
+		label{
+			font-weight: bold;
+		}
+		.btn.btn-lg.btn-default{
+			background-color:#D4D4D4;
+		}
+		body {
+			background-color:#FAFAFA;
+		}
+
+	</style>
+
+	<script src="bootstrap/js/jquery.min.js"></script>
+	<script src="bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="lhgcore.js"></script>
+	<script type="text/javascript" src="lhgcalendar.js"></script>
+</head>
+
+<body  scroll="no" >
+<div class="container" >
+	<div class="row clearfix" style="margin-right:1%;">
+		<div class="col-md-12 column">
+			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+
+
+				<div class="btn-group btn-group-justified">
+					<a href="" onclick="tableControll.backToTableList()" class="btn btn-lg btn-default"><em class="glyphicon glyphicon-chevron-left"></em>  返回</a>
+					<a href="" onclick="load()" class="btn btn-lg btn-default"><em class="glyphicon glyphicon-refresh"></em>  刷新</a>
+					<a href=""  onclick="onClik()" class="btn btn-lg btn-default"><em class="glyphicon glyphicon-list-alt"></em>  保存</a>
+
+				</div>
+
+
+
+			</nav>
+		</div>
+	</div>
+
+
+	<div class="row clearfix" style="margin-top:70px;">
+		<div class="col-md-12 column" >
+			<div  id="form1" class="form-inline" ></div>
+		</div>
+	</div>
+
+	<div class="row clearfix"  style="margin-top:70px;display:none;" id="sonDiv" >
+		<div class="col-md-12 column" >
+			<table class="table table-condensed table-hover">
+				<thead>
+
+						<th class="col-md-8 column">
+							分层情况
+						</th>
+						<th  class="col-md-2 column">
+
+						</th>
+						<th class="col-md-2 column" style="text-align: right;">
+							<a onclick="reLoadSubTableList()" ><em class="glyphicon glyphicon-refresh btn-lg" ></em></a>
+						</th>
+
+				</thead>
+				<tbody id="sonbody">
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+
+
+</div>
+
+
+
+
+
+<link href="aform.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="json2.js"></script>
+<script src="aform.js" type="text/javascript"></script>
+<script src="aform.config.js" type="text/javascript"></script>
+<script src="aform.plugin.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+
+	function load() {
+        var value=tableControll.getFormValue();
+        var fields=tableControll.getFormFields();
+        cbGenForm(value,fields);
+        subTabListDivOnload();
+    }
+
+    function subTabListDivOnload()
+    {
+        document.getElementById("sonDiv").style.display="inline";
+        //var subTableList = tableControll.getSubTableList();
+        var sonlist= new Array();
+        var subTableList=tableControll.getSubTableList();
+        //var sonString="钻孔点_68-钻探点综合记录表_s1,钻孔点_68-钻探点综合记录表_s2,钻孔点_68-钻探点综合记录表_s3";
+
+        sonlist=subTableList.split(",");
+        var compare = function (x, y) {//比较函数
+            if (x < y) {
+                return -1;
+            } else if (x > y) {
+                return 1;
+            } else {
+                return 0;
+            }
+        }
+        //数组排序防止混乱
+        sonlist.sort(compare);
+
+        var sonbody=document.getElementById("sonbody");
+        var html="";
+        if(sonlist!="")
+        {
+            var i=1;
+            for (var son of sonlist) {
+                var sonTabName =getSubTabValue(son, i); i+=1;
+                html=html+"<tr><td style='overflow:hidden;white-space:nowrap;text-overflow:ellipsis;'><p >"+sonTabName+"</p></td>";
+                html=html+"<td><button type='button' style='float:right;' ";
+                html=html+"class='btn btn-primary ' onclick=openSonWebview('"+son+"')>";
+                html=html+"<em class='glyphicon glyphicon-edit btn-xs' ></em></button></td> ";
+                html=html+"<td><button type='button' style='float:left;' class='btn btn-primary'  ";
+                html=html+"onclick=deleteSonTab('"+son+"')>";
+                html=html+"<em class='glyphicon glyphicon-remove btn-xs'  ></em></button></td></tr>";
+            }
+        }
+
+        html= html+ "<tr><td><button type='button' class='btn btn-primary btn-default' onclick=addSonTab()";
+        html= html+ "<em class='glyphicon glyphicon-plus btn-lg'>增加<em></button></td><td></td><td></td></tr>";
+        sonbody.innerHTML=html;
+
+    }
+    //打开子表
+    function openSonWebview(sonFileName)
+    {	//
+        //alert(sonFileName)
+        tableControll.openSubTable(sonFileName);
+        //reload();
+    }
+    //保存表单
+    function onClik()
+    {
+        var formInfo="";
+        formInfo=jf.getJsonString();
+        //alert(formInfo);
+        var save=tableControll.saveForm(formInfo);
+		//1成功
+        if(sava=1)
+		{
+            alert("保存成功")
+            load();
+		}else{
+            alert("保存失败")
+		}
+    }
+    //刷新子表DIV
+    function reLoadSubTableList()
+    {
+        subTabListDivOnload();
+    }
+
+    function generate(input,config)
+    {
+        config = typeof config == "string" ? eval("(" + config + ")") : config;
+        input = typeof input == "string" ? eval("(" + input + ")") : input;
+        jf = new AForm("form1", config);
+        jf.render(input);
+    }
+
+    function cbGenForm(data,conf)
+    {
+        conf = conf || {};
+        generate(data,conf);
+
+        try
+        {
+            //显示json字符串,防止ie8展示unicode格式的汉字
+            eval("g_data = '"+JSON.stringify(data)+"';");
+        }
+        catch(ex)
+        {
+            g_data = JSON.stringify(data);
+        }
+
+        try
+        {
+            //显示json字符串,防止ie8展示unicode格式的汉字
+            eval("g_conf = '"+JSON.stringify(conf)+"';");
+        }
+        catch(ex)
+        {
+            g_conf = JSON.stringify(conf);
+        }
+
+
+    }
+
+    //删除子表
+    function deleteSonTab(name)
+    {
+        var flag=app.deleteSonTab(name);
+        //根据返回值判断删除成功后刷新页面
+        if(flag==1)
+        {
+            reload();
+        }
+    }
+
+
+    //增加子表
+    function addSonTab()
+    {
+        //addSonTab("point_1-point_t1")
+        tableControll.addSubTable();
+        //刷新页面避免返回后显示不了增加的子表
+        reload();
+    }
+    function getSubTabValue(name, idx)
+    {
+        //var strDataValue =app.readDataJson(name);
+        //var dataValue = JSON.parse(strDataValue);
+
+
+        //var dep = dataValue["层底深度(m)"];
+        //var comm = dataValue["地质描述"];
+        //alert(comm);
+        var ret =  "层" + idx;
+        //ret += "&nbsp;&nbsp;&nbsp;&nbsp;-" + dep;
+        //ret += "&nbsp;&nbsp;&nbsp;&nbsp;" + comm;
+        return ret;
+    }
+
+
+</script>
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,12 @@
+{
+    "fields":
+    {
+    	"钻孔井管结构表子表":{},
+		"tablename":{"cssText":"display: none;"},
+    	"井管编号":{inline:true,"width":"100%"},
+		"井管变化深度(m)":{inline:true,"width":"100%"},
+		"单节井管长度(m)":{inline:true,"width":"100%"},
+		"井管类型":{inline:true,"width":"100%"},
+		"井管内径(mm)":{inline:true,"width":"100%"}
+    }
+}

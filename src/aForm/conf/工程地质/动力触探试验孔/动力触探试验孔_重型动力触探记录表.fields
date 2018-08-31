@@ -1,0 +1,8 @@
+{
+    "fields":
+    {
+    	"重型动力触探记录表":{},
+		"tablename":{"cssText":"display: none;"},
+		"统一编号":{inline:true,"width":"100%","required": true}
+    }
+}

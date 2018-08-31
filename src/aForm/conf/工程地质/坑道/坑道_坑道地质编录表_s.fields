@@ -1,0 +1,16 @@
+{
+    "fields":
+    {
+    	"坑道地质编录表子表":{},
+    	"tablename":{"cssText":"display: none;"},
+		"分层编号":{"inline":true,"width":"100%"},
+		"分层长度":{"inline":true,"width":"100%"},
+		"分层厚度":{"inline":true,"width":"100%"},
+		"岩性描述":{"inline":true,"width":"100%"},
+		"岩石完整程度":{"inline":true,"width":"100%"},
+		"节理裂隙发育程度":{"inline":true,"width":"100%"},
+		"相互切割关系":{"inline":true,"width":"100%"},
+		"含水性":{"inline":true,"width":"100%"},
+		"裂隙条数":{"inline":true,"width":"100%"}
+    }
+}

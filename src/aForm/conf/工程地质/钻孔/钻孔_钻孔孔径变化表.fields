@@ -1,0 +1,9 @@
+{
+    "fields":
+    {
+    	"钻孔孔径变化表":{},
+		"tablename":{"cssText":"display: none;"},
+    	"统一编号":{inline:true,"width":"100%"}
+
+    }
+}

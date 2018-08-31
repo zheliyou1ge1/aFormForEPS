@@ -1,0 +1,14 @@
+{
+    "fields":
+    {
+    	"静力触探试验信息表":{},
+    	"tablename":{"cssText":"display: none;"},
+    	"钻孔ID":{"inline": true,"width":"100%","labelCssText":"color:#FF0000","required": true},
+    	"初探类型":{"inline":true,"width":"100%","type": "radio","datalist": ["单桥", "双桥"]},
+		"采样间隔":{inline:true,"width":"100%"},
+		"锥尖阻力":{inline:true,"width":"100%"},
+		"侧壁阻力":{inline:true,"width":"100%","placeholder":"单桥不填写"},
+		"比贯入阻力":{inline:true,"width":"100%"},
+		"孔隙水压力":{inline:true,"width":"100%"},
+    }
+}

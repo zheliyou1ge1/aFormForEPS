@@ -1,0 +1,43 @@
+{
+    "fields":
+    {
+    	"钻探点综合记录表":{},
+    	"tablename":{"cssText":"display: none;"},
+    	"统一编号":{"inline": true,"width":"100%","labelCssText":"color:#FF0000","required": true},
+    	"野外编号":{"inline": true,"width":"100%"},
+
+			"开钻日期":{"inline":true,"width":"100%","type":"date"},
+			"开钻日期2":{"inline":true,"width":"100%","type":"date1"},
+			"结束日期":{"inline":true,"width":"100%","type":"date"},
+			"记录人":{"inline":true,"width":"100%"},
+			"审核人":{"inline":true,"width":"100%"},
+			"司钻人":{"inline":true,"width":"100%"},
+			"机长":{"inline":true,"width":"100%"},
+			"项目负责人":{"inline":true,"width":"100%"},
+			"施工单位":{"inline":true,"width":"100%","labelCssText":"color:#FF0000"},
+
+
+
+			"地理位置":{"inline":true,"width":"100%"},
+			"X坐标":{"inline":true,"width":"100%","labelCssText":"color:#FF0000"},
+			"Y坐标":{"inline":true,"width":"100%","labelCssText":"color:#FF0000"},
+			"高程":{"inline":true,"width":"100%","labelCssText":"color:#FF0000"},
+			"经度":{"inline":true,"width":"100%"},
+			"纬度":{"inline":true,"width":"100%"},
+			"钻机类型":{"inline":true,"width":"100%"},
+			"钻孔类型":{"inline":true,"width":"100%"},
+			"井斜":{"inline":true,"width":"100%"},
+			"开孔直径(mm)":{"inline":true,"width":"100%"},
+			"终孔直径(mm)":{"inline":true,"width":"100%"},
+			"终孔深度(m)":{"inline":true,"width":"100%"},
+			"成井深度(m)":{"inline":true,"width":"100%"},
+			"初见水位(m)":{"inline":true,"width":"100%"},
+			"静止水位(m)":{"inline":true,"width":"100%"},
+			"质量等级":{"inline":true,"width":"100%"},
+			"岩芯采取率(%)":{"inline":true,"width":"100%"},
+			"钻孔级别(建模使用)":{"inline":true,"width":"100%"},
+			"含水层特征":{"inline":true,"width":"100%"},
+			"取样情况":{"inline":true,"width":"100%"}
+		
+    }
+}

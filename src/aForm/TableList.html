@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no"> -->
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="bootstrap/css/bootstrap-editable.css">
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<title></title>
+
+
+<style>
+    ::-webkit-scrollbar {display:none}
+	a:hover{
+		text-decoration:none;
+		color:darkred;
+	}
+	table{
+		font-size: 18px;
+	}
+	.btn.btn-lg.btn-default{
+		background-color:#D4D4D4;
+	}
+	body {
+		background-color:#FAFAFA;
+	}
+
+</style>
+</head>
+
+<body  scroll="no">
+<div class="container-fiuled" >
+	<div class="row clearfix" >
+
+		<nav class="navbar navbar-default navbar-fixed-top"  role="navigation">
+
+			<div class="btn-group btn-group-justified">
+				<a href="javascript:void(0);" onclick="tableListControll.exit()" class="btn btn-lg btn-default"><em class="glyphicon glyphicon glyphicon-remove"></em>  关闭</a>
+				<a href="javascript:void(0);"  onclick="load()" class="btn btn-lg btn-default"><em class="glyphicon glyphicon-refresh"></em>  刷新</a>
+			</div>
+
+
+		</nav>
+
+		<div class="col-md-12 column" style="margin-top:70px;">
+			<table class="table">
+				<thead>
+					<tr>
+						<th></th><th>选择表</th>
+					</tr>
+				</thead>
+				<tbody id="tbody" >
+
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="container-fiuled" >
+		<div class="col-md-4 column jumbotron">
+			<div class=" text-center">
+				<p><a href="#" id="ftextinput"  style="color:#666;font-size:12px;" class="smell"></a></p>
+			</div>
+		</div>
+		<div class="col-md-4 column " >
+			<div class="text-center">
+				<div  >
+					<img id="imgshow" class="center-block img-responsive"  alt="" src="images/no_picture.png" onclick="changeImg(this.src)" />
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4 column ">
+			<div class="text-center">
+
+					<div class="form-inline">
+						<audio id="playermp3" controls="controls">
+							<source src="audio/horse.mp3" type="audio/mp3">
+						</audio>
+						<br/>
+					</div>
+
+			</div>
+		
+		</div>
+	</div>
+
+	
+</div>
+
+<script src="bootstrap/js/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
+<script src="bootstrap/js/bootstrap-editable.js"></script>
+
+
+<script type="text/javascript">
+
+    var ImageUrl;
+    var VoiceUrl;
+    var Text;
+
+    function load()
+    {
+        ImageUrl= tableListControll.getImageUrl();
+        VoiceUrl=tableListControll.getVoiceUrl();
+        Text=tableListControll.getText();
+
+        var namelist= new Array();
+        var nameString=tableListControll.selectTableOfType();
+        namelist=nameString.split(",");
+        var tbody=document.getElementById("tbody");
+        var html="";
+        for (var name of namelist) {
+            //name=钻探点综合记录表
+            var bTabNotEmptyFlag=tableListControll.isTabEmpty(name+".json");
+            if(bTabNotEmptyFlag==1)
+            {
+                html=html+"<tr><td style='width:30px;'><em class='glyphicon glyphicon-ok-sign'></em></td><td><a onclick=tableListControll.openTableByTableName('"+name+"') >"+name+"</a></td></tr>";
+            }else
+            {
+                html=html+"<tr><td style='width:30px;'></td><td><a onclick=tableListControll.openTableByTableName('"+name+"') >"+name+"</a></td></tr>";
+            }
+        }
+        tbody.innerHTML=html;
+        if(ImageUrl!=""&&ImageUrl != undefined)
+        {
+            //alert(ImageUrl);
+            document.getElementById("imgshow").src=ImageUrl;
+        }
+
+        if(VoiceUrl!=""&&VoiceUrl != undefined)
+        {
+            //alert(outVoiceUrl);
+            var mp3audio=document.getElementById("playermp3");
+            mp3audio.src=VoiceUrl;
+        }
+
+        if(Text!=""&&Text != undefined)
+        {
+            $('#ftextinput').editable({
+                type: "text",                //编辑框的类型。支持text|textarea|select|date|checklist等
+                title: "Text",              //编辑框的标题
+                disabled: false,             //是否禁用编辑
+                emptytext: Text,          //空值的默认文本
+                mode: "inline",              //编辑框的模式：支持popup和inline两种模式，默认是popup
+                validate: function (value) { //字段验证
+                    if (!$.trim(value)) {
+                        return '不能为空';
+                    }else{
+                        var flag=changeFtext(value);
+                        if(flag>0)
+                        {
+                            //alert("修改成功");
+                            return;
+                        }else
+                        {
+                            //alert("修改成功");
+                            return;;
+                        }
+
+
+                    }
+                }
+            });
+        }else{
+            $('#ftextinput').editable({
+                type: "text",                //编辑框的类型。支持text|textarea|select|date|checklist等
+                title: "Text",              //编辑框的标题
+                disabled: false,             //是否禁用编辑
+                emptytext: undefined,          //空值的默认文本
+                mode: "inline",              //编辑框的模式：支持popup和inline两种模式，默认是popup
+                validate: function (value) { //字段验证
+                    if (!$.trim(value)) {
+                        return '不能为空';
+                    }else{
+                        var flag=changeFtext(value);
+                        if(flag>0)
+                        {
+                            //alert("修改成功");
+                            return;
+                        }else
+                        {
+                            //alert("修改成功");
+                            return;;
+                        }
+                    }
+                }
+            });
+
+        }
+
+
+    }
+    //
+    // function openWebview(tableName)
+    // {	//point_t1,point_1
+    // 	//alert(type+'    '+table);
+    //    tableListControll.openTableByTableName(tableName);
+    // }
+
+</script>
+
+
+</body>
+
+
+</html>

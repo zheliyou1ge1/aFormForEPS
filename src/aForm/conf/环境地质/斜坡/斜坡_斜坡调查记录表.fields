@@ -1,0 +1,37 @@
+{
+    "fields":
+    {
+    	"斜坡调查记录表":{},
+    	"tablename":{"cssText":"display: none;"},
+    	"统一编号":{"inline": true,"width":"100%","labelCssText":"color:#FF0000","required": true},
+    	"野外编号":{"inline": true,"width":"100%"},
+
+			"日期":{"inline":true,"width":"100%","type":"date"},
+			"记录人":{"inline":true,"width":"100%"},
+			"审核人":{"inline":true,"width":"100%"},
+			"项目负责人":{"inline":true,"width":"100%"},
+
+
+
+			"地理位置":{"inline":true,"width":"100%"},
+			"经度":{"inline":true,"width":"100%"},
+			"纬度":{"inline":true,"width":"100%"},
+			"X坐标":{"inline":true,"width":"100%"},
+			"Y坐标":{"inline":true,"width":"100%"},
+			"标高（m）":{"inline":true,"width":"100%","placeholder":"顶、脚"},
+			"项目名称":{"inline":true,"width":"100%"},
+			"斜坡类型":{"inline":true,"width":"100%"},
+			"地层岩性":{"inline":true,"width":"100%"},
+			"地质构造":{"inline":true,"width":"100%"},
+			"节理裂隙":{"inline":true,"width":"100%"},
+			"微地貘":{"inline":true,"width":"100%"},
+			"斜坡特征":{"inline":true,"width":"100%"},
+			"变形特征":{"inline":true,"width":"100%"},
+			"岩（土）特征":{"inline":true,"width":"100%"},
+			"地下水":{"inline":true,"width":"100%"},
+			"成因分析":{"inline":true,"width":"100%"},
+			"稳定性评述":{"inline":true,"width":"100%"},
+			"危害程度":{"inline":true,"width":"100%"},
+			"平面和剖面示意图（或照片）":{"inline":true,"width":"100%","placeholder":"照片编号"}
+			}
+}

@@ -1,0 +1,15 @@
+{
+    "fields":
+    {
+    	"钻孔含水层段表子表":{},
+		"tablename":{"cssText":"display: none;"},
+    	"含水层编号":{inline:true,"width":"100%"},
+		"起始深度(m)":{inline:true,"width":"100%"},
+		"终止深度(m)":{inline:true,"width":"100%"},
+		"含水层类型":{inline:true,"width":"100%"},
+		"地下水类型":{inline:true,"width":"100%"},
+		"静水位":{inline:true,"width":"100%"},
+		"孔内水温":{inline:true,"width":"100%"},
+		"测温深度":{inline:true,"width":"100%"}
+    }
+}

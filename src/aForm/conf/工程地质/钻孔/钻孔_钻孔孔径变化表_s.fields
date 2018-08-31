@@ -1,0 +1,11 @@
+{
+    "fields":
+    {
+    	"钻孔孔径变化表子表":{},
+		"tablename":{"cssText":"display: none;"},
+    	"变径编号":{inline:true,"width":"100%"},
+		"变径深度(m)":{inline:true,"width":"100%"},
+		"钻孔直径(mm)":{inline:true,"width":"100%"}
+		
+    }
+}

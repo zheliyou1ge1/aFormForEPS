@@ -1,0 +1,43 @@
+{
+    "fields":
+    {
+    	"断裂点0.8记录表":{},
+    	"tablename":{"cssText":"display: none;"},
+    	"统一编号":{"inline": true,"width":"100%","labelCssText":"color:#FF0000","required": true},
+    	"野外编号":{"inline": true,"width":"100%"},
+
+			"日期":{"inline":true,"width":"100%","type":"date"},
+			"记录人":{"inline":true,"width":"100%"},
+			"审核人":{"inline":true,"width":"100%"},
+			"项目负责人":{"inline":true,"width":"100%"},
+
+
+
+			"地理位置":{"inline":true,"width":"100%"},
+			"X坐标":{"inline":true,"width":"100%","labelCssText":"color:#FF0000","required": true},
+			"Y坐标":{"inline":true,"width":"100%","labelCssText":"color:#FF0000","required": true},
+			"高程":{"inline":true,"width":"100%","labelCssText":"color:#FF0000","required": true},
+			"经度":{"inline":true,"width":"100%"},
+			"纬度":{"inline":true,"width":"100%"},
+			"上盘地层代号":{"inline":true,"width":"100%"},
+			"下盘地层代号":{"inline":true,"width":"100%"},
+			"断层性质":{"inline":true,"width":"100%","type": "checkbox","datalist": ["压性断层", "张性断层", "扭性断层", "压扭性断层", "张扭性断层正断层", "逆断层", "平移断层", "走向断层", "倾向断层", "斜向断层", "顺层地层", "纵断层", "横断层", "斜断层"]},
+			"断层带岩性":{"inline":true,"width":"100%","type": "checkbox","datalist": ["断层泥", "糜棱岩", "断层角砾岩", "碎裂岩", "碎块岩", "玻化岩"]},
+			"断裂岩胶结特征":{"inline":true,"width":"100%"},
+			"上盘节理裂隙描述":{"inline":true,"width":"100%"},
+			"上盘节理裂隙相互关系":{"inline":true,"width":"100%"},
+			"下盘节理裂隙描述":{"inline":true,"width":"100%"},
+			"下盘节理裂隙相互关系":{"inline":true,"width":"100%"},
+			"断层倾角（度）":{"inline":true,"width":"100%"},
+			"断层走向（度）":{"inline":true,"width":"100%"},
+			"断距（米）":{"inline":true,"width":"100%"},
+			"地貌成因类型":{"inline":true,"width":"100%","type": "checkbox","datalist": ["构造", "侵蚀", "剥蚀", "河流侵蚀堆积", "河流堆积", "岩溶", "人工地貌", "构造地貌", "重力地貌"]},
+			"地貌形态":{"inline":true,"width":"100%","type": "radio","datalist": ["漫滩", "阶地", "岗地","丘陵", "低山", "中山", "古河道", "河湖","渠道", "堤防", "台地", "桌状山", "河谷","漫滩", "残丘", "陡崖", "悬崖", "冲积扇", "夷平面", "石林", "峰丛", "峰林", "孤峰"]},
+			"物理地质现象":{"inline":true,"width":"100%","placeholder":"描述崩塌、滑坡、危岩、泥石流、岩溶塌陷、地面沉陷、采空区、填土沉陷等"},
+			"断裂带富水性特征":{"inline":true,"width":"100%"},
+			"沿途观察记录":{"inline":true,"width":"100%"},
+			"地质剖面素描":{"inline":true,"width":"100%"},
+			"照片录像":{"inline":true,"width":"100%"}
+		
+    }
+}

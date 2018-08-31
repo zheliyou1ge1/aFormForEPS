@@ -1,0 +1,33 @@
+{
+    "fields":
+    {
+    	"地质灾害评估调查表":{},
+    	"tablename":{"cssText":"display: none;"},
+    	"统一编号":{"inline": true,"width":"100%","labelCssText":"color:#FF0000","required": true},
+    	"野外编号":{"inline": true,"width":"100%"},
+			
+			"开钻日期":{"inline":true,"width":"100%",type:"date"},
+			"结束日期":{"inline":true,"width":"100%",type:"date"},
+			"记录人":{"inline":true,"width":"100%"},
+			"审核人":{"inline":true,"width":"100%"},
+			"项目负责人":{"inline":true,"width":"100%"},
+
+
+
+			"地理位置":{"inline":true,"width":"100%"},
+			"X坐标":{"inline":true,"width":"100%","labelCssText":"color:#FF0000","required": true},
+			"Y坐标":{"inline":true,"width":"100%","labelCssText":"color:#FF0000","required": true},
+			"高程":{"inline":true,"width":"100%","labelCssText":"color:#FF0000","required": true},
+			"经度":{"inline":true,"width":"100%"},
+			"纬度":{"inline":true,"width":"100%"},
+			"地质环境要素":{"inline":true,"width":"100%"},
+			"地表形态及变形特征":{"inline":true,"width":"100%"},
+			"结构及体积特征":{"inline":true,"width":"100%"},
+			"发育程度":{"inline":true,"width":"100%"},
+			"危害程度":{"inline":true,"width":"100%"},
+			"诱发因素":{"inline":true,"width":"100%"},
+			"防治建议":{"inline":true,"width":"100%"},
+			"平面或剖面示意图":{"inline":true,"width":"100%"}
+		
+    }
+}

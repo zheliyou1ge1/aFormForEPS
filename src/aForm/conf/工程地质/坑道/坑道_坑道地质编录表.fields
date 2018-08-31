@@ -1,0 +1,28 @@
+{
+    "fields":
+    {
+    	"坑道地质编录表":{},
+    	"tablename":{"cssText":"display: none;"},
+    	"统一编号":{"inline": true,"width":"100%","labelCssText":"color:#FF0000","required": true},
+    	"野外编号":{"inline": true,"width":"100%"},
+
+			"日期":{"inline":true,"width":"100%","type":"date"},
+			"记录人":{"inline":true,"width":"100%"},
+			"施工人":{"inline":true,"width":"100%"},
+			"审核人":{"inline":true,"width":"100%"},
+			"项目负责人":{"inline":true,"width":"100%"},
+
+
+
+			"地理位置":{"inline":true,"width":"100%"},
+			"X坐标":{"inline":true,"width":"100%","labelCssText":"color:#FF0000"},
+			"Y坐标":{"inline":true,"width":"100%","labelCssText":"color:#FF0000"},
+			"标高":{"inline":true,"width":"100%","labelCssText":"color:#FF0000"},
+			"经度":{"inline":true,"width":"100%"},
+			"纬度":{"inline":true,"width":"100%"},
+			"坑道类型":{"inline":true,"width":"100%"},
+			"坑道长度":{"inline":true,"width":"100%"},
+			"坑口流量":{"inline":true,"width":"100%"},
+			"揭露地层及岩性":{"inline":true,"width":"100%"}
+			}
+}

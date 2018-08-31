@@ -1,0 +1,22 @@
+{
+    "fields":
+    {
+    	"钻孔简易水文地质编录表":{},
+    	"tablename":{"cssText":"display: none;"},
+		"分层编号":{"inline":true,"width":"100%"},
+		"地层时代":{"inline":true,"width":"100%"},
+		"分层厚度":{"inline":true,"width":"100%"},
+		"分层深度":{"inline":true,"width":"100%"},
+		"岩芯长度":{"inline":true,"width":"100%"},
+		"分层采取率":{"inline":true,"width":"100%"},
+		"分层柱状岩芯长度":{"inline":true,"width":"100%"},
+		"分层RQD值":{"inline":true,"width":"100%"},
+		"分层岩性":{"inline":true,"width":"100%"},
+		"岩芯完整程度":{"inline":true,"width":"100%"},
+		"节理裂隙发育程度":{"inline":true,"width":"100%"},
+		"相互切割关系":{"inline":true,"width":"100%"},
+		"含水裂隙条数":{"inline":true,"width":"100%"},
+		"含隔水层划分":{"inline":true,"width":"100%"},
+		"工程地质岩组划分":{"inline":true,"width":"100%"}
+    }
+}

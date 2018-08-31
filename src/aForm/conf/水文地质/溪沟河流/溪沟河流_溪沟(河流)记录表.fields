@@ -1,0 +1,43 @@
+{
+    "fields":
+    {
+    	"溪沟(河流)记录表":{},
+    	"tablename":{"cssText":"display: none;"},
+    	"统一编号":{"inline": true,"width":"100%","labelCssText":"color:#FF0000","required": true},
+    	"野外编号":{"inline": true,"width":"100%"},
+
+			"日期":{"inline":true,"width":"100%","type":"date"},
+			"记录人":{"inline":true,"width":"100%"},
+			"审核人":{"inline":true,"width":"100%"},
+			"项目负责人":{"inline":true,"width":"100%"},
+
+
+
+			"地理位置":{"inline":true,"width":"100%"},
+			"经度":{"inline":true,"width":"100%"},
+			"纬度":{"inline":true,"width":"100%"},
+			"X坐标":{"inline":true,"width":"100%"},
+			"Y坐标":{"inline":true,"width":"100%"},
+			"高程":{"inline":true,"width":"100%"},
+			"所属水系":{"inline":true,"width":"100%"},
+			"流量":{"inline":true,"width":"100%"},
+			"测流日期":{"inline":true,"width":"100%"},
+			"测流方法":{"inline":true,"width":"100%","type":"radio","datalist":["三角堰","矩形堰","浮标法","流速仪法"]},
+			"采样情况":{"inline":true,"width":"100%"},
+			"气温（摄氏度）":{"inline":true,"width":"100%"},
+			"水温（摄氏度）":{"inline":true,"width":"100%"},
+			"水色":{"inline":true,"width":"100%"},
+			"透明度":{"inline":true,"width":"100%"},
+			"嗅味":{"inline":true,"width":"100%"},
+			"pH":{"inline":true,"width":"100%"},
+			"河流溪沟形态":{"inline":true,"width":"100%"},
+			"流量季节变化特征":{"inline":true,"width":"100%"},
+			"枯水位标高（米）":{"inline":true,"width":"100%"},
+			"洪水位标高（米）":{"inline":true,"width":"100%"},
+			"河流流经地层（代号）":{"inline":true,"width":"100%"},
+			"物理地质现象":{"inline":true,"width":"100%","placeholder":"描述崩塌、滑坡、危岩、泥石流、岩溶塌陷、地面沉陷、采空区、填土沉陷等"},
+			"利用情况":{"inline":true,"width":"100%"},
+			"沿途观察描述":{"inline":true,"width":"100%"},
+			"照片录像":{"inline":true,"width":"100%"}
+	}
+}
