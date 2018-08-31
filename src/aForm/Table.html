@@ -80,7 +80,7 @@
 						<th  class="col-md-2 column">
 
 						</th>
-						<th class="col-md-2 column" style="text-align: right;">
+						<th class="col-md-2 column" style="text-align: right">
 							<a onclick="reLoadSubTableList()" ><em class="glyphicon glyphicon-refresh btn-lg" ></em></a>
 						</th>
 
@@ -145,10 +145,10 @@
             for (var son of sonlist) {
                 var sonTabName =getSubTabValue(son, i); i+=1;
                 html=html+"<tr><td style='overflow:hidden;white-space:nowrap;text-overflow:ellipsis;'><p >"+sonTabName+"</p></td>";
-                html=html+"<td><button type='button' style='float:right;' ";
+                html=html+"<td></td><td><button type='button' ";
                 html=html+"class='btn btn-primary ' onclick=openSonWebview('"+son+"')>";
-                html=html+"<em class='glyphicon glyphicon-edit btn-xs' ></em></button></td> ";
-                html=html+"<td><button type='button' style='float:left;' class='btn btn-primary'  ";
+                html=html+"<em class='glyphicon glyphicon-edit btn-xs' ></em></button> ";
+                html=html+"<button type='button'  class='btn btn-primary'  ";
                 html=html+"onclick=deleteSonTab('"+son+"')>";
                 html=html+"<em class='glyphicon glyphicon-remove btn-xs'  ></em></button></td></tr>";
             }

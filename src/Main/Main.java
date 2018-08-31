@@ -3,6 +3,7 @@ package Main;
 import Controller.SubTableControll;
 import Controller.TableControll;
 import Controller.TableListControll;
+import Route.TableList;
 import javafx.application.Application;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
@@ -13,10 +14,14 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import util.FileUtil;
 
+import javax.swing.*;
+import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Main extends Application {
+
+    //传入的三个参数Type="钻孔" id="1" Path="C:\Users\laola\Desktop\outEpsDir\"
     public static String Type;
     public static String id;
     public static String Path;
@@ -51,7 +56,15 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) {
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         PublicStage=stage;
+        Frame frame = new Frame();
+        frame.getState();
         stage.setTitle("云南地质大数据");
         String filepath = "/aForm/images/edit.png";
         Image icon = new Image(filepath);

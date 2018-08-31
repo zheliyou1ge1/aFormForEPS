@@ -1,12 +1,8 @@
 package Controller;
 
 import Main.Main;
-import Main.SubTable;
-import Main.Table;
-import Main.TableList;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
+import Route.SubTable;
+import Route.Table;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
 import javafx.stage.Screen;
@@ -19,7 +15,6 @@ import javax.swing.plaf.FontUIResource;
 import java.awt.*;
 import java.io.File;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -77,6 +72,37 @@ public class SubTableControll {
         //设置窗体类型
         stage.initStyle(StageStyle.DECORATED);
         stage.show();
+    }
+    public int saveSubTableForm(String FormInfo)
+    {
+        //Main.OpenSubTableName=钻孔_1-钻孔井管结构表_s6
+        String saveSubTableName=Main.OpenSubTableName;
+        for (Map.Entry<String, String> entry : Main.mSonTableTmpValue.entrySet()) {
+            if(entry.getKey().equals(Main.OpenSubTableName)){
+                entry.setValue(FormInfo);
+                SubTable.Value=FormInfo;
+                String[] tabNameString=SubTable.Value.split("\"");
+                SubTable.FieldsName=tabNameString[3];
+                break;
+            }
+        }
+
+        String sonJson = "[";
+        for (Map.Entry<String, String> entry : Main.mSonTableTmpValue.entrySet()) {
+            if(entry.getKey().contains(Main.OpenTableName+"_s")){
+                if( sonJson.length()>1 ) sonJson +=",";
+                sonJson += entry.getValue();
+            }
+        }
+        sonJson += "]";
+        String SubTableFilePath=Main.Path+"/data/"+Main.Type+"_"+Main.id+"-"+Main.OpenTableName+"_s.json";
+        try {
+            FileUtil.saveFile(sonJson,SubTableFilePath);
+            return 1;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return 0;
+        }
     }
 
 }

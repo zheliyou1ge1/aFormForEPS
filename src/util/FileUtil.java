@@ -1,6 +1,9 @@
 package util;
 
+import Controller.TableControll;
+
 import java.io.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class FileUtil {
@@ -99,5 +102,17 @@ public class FileUtil {
         fos.write(toSaveString.getBytes());
         fos.close();
 
+    }
+    public static boolean hasSubTable(String selectName)
+    {
+        File confDir = new File(FileUtil.getFileRealPath(TableControll.class)+ "/aForm/conf/");
+        List<File> FileList = new ArrayList<File>();
+        FileList = FileUtil.getDirAllFileList(confDir, FileList);
+        for (File f : FileList) {
+            if (f.getName().contains(selectName)) {
+                return true;
+            }
+        }
+        return false;
     }
 }

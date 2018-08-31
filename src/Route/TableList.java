@@ -1,4 +1,5 @@
-package Main;
+package Route;
+import Main.Main;
 import javafx.beans.value.ObservableValue;
 import javafx.concurrent.Worker;
 import javafx.geometry.HPos;
@@ -35,7 +36,7 @@ public class TableList extends Region  {
                 icon.setImage(icon.getImage().getScaledInstance(50, 50,Image.SCALE_DEFAULT ));
                 jlb.setIcon(icon);
                 jlb.setSize(50, 50);
-                JOptionPane.showMessageDialog(null, wEvent.getData(),"",JOptionPane.INFORMATION_MESSAGE,icon);
+                JOptionPane.showMessageDialog(JOptionPane.getRootFrame(), wEvent.getData(),"",JOptionPane.INFORMATION_MESSAGE,icon);
             });
             TableListHtmlUrl = url.toExternalForm();
         }catch (Exception e)

@@ -1,8 +1,8 @@
 package Controller;
 
 import Main.Main;
-import Main.Table;
-import Main.TableList;
+import Route.Table;
+import Route.TableList;
 import javafx.application.Platform;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;

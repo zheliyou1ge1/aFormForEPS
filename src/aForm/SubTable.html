@@ -52,7 +52,7 @@
 				<div class="btn-group btn-group-justified">
 					<a href="" onclick="subTableControll.backToTable()" class="btn btn-lg btn-default"><em class="glyphicon glyphicon-chevron-left"></em>  返回</a>
 					<a href="" onclick="load()" class="btn btn-lg btn-default"><em class="glyphicon glyphicon-refresh"></em>  刷新</a>
-					<a href=""  onclick="onClik()" class="btn btn-lg btn-default"><em class="glyphicon glyphicon-list-alt"></em>  保存</a>
+					<a href=""  onclick="saveSubForm()" class="btn btn-lg btn-default"><em class="glyphicon glyphicon-list-alt"></em>  保存</a>
 
 				</div>
 
@@ -92,16 +92,17 @@
     }
 
     //保存表单
-    function onClik()
+    function saveSubForm()
     {
-        var formInfo="";
-        formInfo=jf.getJsonString();
+        var formInfo=jf.getJsonString();
         //alert(formInfo);
-        var save=app.saveString(formInfo,valueFname);
-
-        if(save!="error")
+        var save=subTableControll.saveSubTableForm(formInfo);
+        if(save==1)
 		{
-            exeJs2Form();
+		    alert("保存成功");
+		}else
+		{
+            alert("保存失败");
 		}
     }
 
