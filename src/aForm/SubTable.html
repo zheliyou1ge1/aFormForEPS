@@ -26,6 +26,7 @@
 		}
 		label{
 			font-weight: bold;
+			cursor:pointer;
 		}
 		.btn.btn-lg.btn-default{
 			background-color:#D4D4D4;
@@ -43,14 +44,14 @@
 </head>
 
 <body scroll="no" >
-<div class="container-fiuled animated fadeInDown " >
+<div class="container-fiuled " style="cursor:pointer;">
 	<div class="row clearfix" style="margin-right:1%;">
 		<div class="col-md-12 column">
 			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 
 
 
-				<div class="btn-group btn-group-justified">
+				<div class="btn-group btn-group-justified animated fadeInDown ">
 					<a href="" onclick="subTableControll.backToTable()" class="btn btn-lg btn-default"><em class="glyphicon glyphicon-chevron-left"></em>  返回</a>
 					<a href="" onclick="load()" class="btn btn-lg btn-default"><em class="glyphicon glyphicon-refresh"></em>  刷新</a>
 					<a href=""  onclick="saveSubForm()" class="btn btn-lg btn-default"><em class="glyphicon glyphicon-list-alt"></em>  保存</a>

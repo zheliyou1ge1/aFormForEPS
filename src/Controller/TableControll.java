@@ -12,6 +12,7 @@ import javafx.scene.Scene;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import sun.reflect.misc.FieldUtil;
 import util.FileUtil;
 
 import javax.swing.*;
@@ -74,6 +75,7 @@ public class TableControll {
     }
     public String getSubTableList()
     {
+        Main.mSonTableTmpValue.clear();
         Map<String,String> subTableMap=new HashMap<String, String>();
         String ret = "";
         String jsonValue="";
@@ -87,6 +89,7 @@ public class TableControll {
             {
                 //获取子表json的值
                 jsonValue=FileUtil.readFile(sub.getPath()).trim();
+                break;
             }
         }
         if( !jsonValue.isEmpty()&&jsonValue.charAt(0) == '[' )
@@ -185,7 +188,7 @@ public class TableControll {
             e.printStackTrace();
             return 0;
         }
-        if(hasSubTable(Main.Type+"_"+Main.OpenTableName)){
+        if(FileUtil.hasSubTable(Main.Type+"_"+Main.OpenTableName)){
             String sonJson = "[";
             for (Map.Entry<String, String> entry : Main.mSonTableTmpValue.entrySet()) {
                 if(entry.getKey().contains(TableFileName.split(".json")[0])){
@@ -254,17 +257,32 @@ public class TableControll {
         }
 
     }
-    public boolean hasSubTable(String selectName)
+    public int deleteSubTable(String SubTableName)
     {
-        File confDir = new File(FileUtil.getFileRealPath(TableControll.class)+ "/aForm/conf/");
-        List<File> FileList = new ArrayList<File>();
-        FileList = FileUtil.getDirAllFileList(confDir, FileList);
-        for (File f : FileList) {
-            if (f.getName().contains(selectName)) {
-                return true;
+        for (Map.Entry<String, String> entry : Main.mSonTableTmpValue.entrySet()) {
+            if(entry.getKey().equals(SubTableName)){
+                Main.mSonTableTmpValue.remove(entry.getKey());
+                break;
             }
         }
-        return false;
+
+        String sonJson = "[";
+        for (Map.Entry<String, String> entry : Main.mSonTableTmpValue.entrySet()) {
+            if(entry.getKey().contains(Main.OpenTableName+"_s")){
+                if( sonJson.length()>1 ) sonJson +=",";
+                sonJson += entry.getValue();
+            }
+        }
+        sonJson += "]";
+        String SubTableFilePath=Main.Path+"/data/"+Main.Type+"_"+Main.id+"-"+Main.OpenTableName+"_s.json";
+        try {
+            FileUtil.saveFile(sonJson,SubTableFilePath);
+            return 1;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return 0;
+        }
+
     }
 
 }

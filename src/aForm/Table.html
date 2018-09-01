@@ -26,6 +26,7 @@
 		}
 		label{
 			font-weight: bold;
+			cursor:pointer;
 		}
 		.btn.btn-lg.btn-default{
 			background-color:#D4D4D4;
@@ -43,17 +44,17 @@
 </head>
 
 <body  scroll="no" >
-<div class="container-fiuled animated fadeInDown " >
+<div class="container-fiuled" style="cursor:pointer;">
 	<div class="row clearfix " style="margin-right:1%;">
 		<div class="col-md-12 column">
 			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 
 
 
-				<div class="btn-group btn-group-justified">
+				<div class="btn-group btn-group-justified animated fadeInDown">
 					<a href="" onclick="tableControll.backToTableList()" class="btn btn-lg btn-default"><em class="glyphicon glyphicon-chevron-left"></em>  返回</a>
 					<a href="" onclick="window.refresh()" class="btn btn-lg btn-default"><em class="glyphicon glyphicon-refresh"></em>  刷新</a>
-					<a href=""  onclick="onClik()" class="btn btn-lg btn-default"><em class="glyphicon glyphicon-list-alt"></em>  保存</a>
+					<a href=""  onclick="saveTableForm()" class="btn btn-lg btn-default"><em class="glyphicon glyphicon-list-alt"></em>  保存</a>
 
 				</div>
 
@@ -63,14 +64,14 @@
 		</div>
 	</div>
 </div>
-<div class="container animated fadeInDown " >
+<div class="container animated fadeInDown"  style="cursor:pointer">
 	<div class="row clearfix" style="margin-top:70px;">
 		<div class="col-md-12 column" >
 			<div  id="form1" class="form-inline" ></div>
 		</div>
 	</div>
 
-	<div class="row clearfix"  style="margin-top:70px;display:none;" id="sonDiv" >
+	<div class="row clearfix"  style="margin-top:70px;display:none;cursor:pointer" id="sonDiv" >
 		<div class="col-md-12 column" >
 			<table class="table table-condensed table-hover">
 				<thead>
@@ -146,10 +147,10 @@
                 var sonTabName =getSubTabValue(son, i); i+=1;
                 html=html+"<tr><td style='overflow:hidden;white-space:nowrap;text-overflow:ellipsis;'><p >"+sonTabName+"</p></td>";
                 html=html+"<td></td><td><button type='button' ";
-                html=html+"class='btn btn-primary ' onclick=openSonWebview('"+son+"')>";
+                html=html+"class='btn btn-primary ' onclick=openSubTable('"+son+"')>";
                 html=html+"<em class='glyphicon glyphicon-edit btn-xs' ></em></button> ";
                 html=html+"<button type='button'  class='btn btn-primary'  ";
-                html=html+"onclick=deleteSonTab('"+son+"')>";
+                html=html+"onclick=deleteSubTab('"+son+"')>";
                 html=html+"<em class='glyphicon glyphicon-remove btn-xs'  ></em></button></td></tr>";
             }
         }
@@ -160,14 +161,14 @@
 
     }
     //打开子表
-    function openSonWebview(sonFileName)
+    function openSubTable(sonFileName)
     {	//
         //alert(sonFileName)
         tableControll.openSubTable(sonFileName);
         //reload();
     }
     //保存表单
-    function onClik()
+    function saveTableForm()
     {
         var formInfo="";
         formInfo=jf.getJsonString();
@@ -225,14 +226,16 @@
     }
 
     //删除子表
-    function deleteSonTab(name)
+    function deleteSubTab(SubTableName)
     {
-        var flag=app.deleteSonTab(name);
+        var flag=tableControll.deleteSubTable(SubTableName);
         //根据返回值判断删除成功后刷新页面
         if(flag==1)
         {
-            reload();
-        }
+            reLoadSubTableList();
+        }else{
+            alert("删除失败")
+		}
     }
 
 
