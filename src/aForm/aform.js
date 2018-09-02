@@ -5,6 +5,7 @@
  */
 
 (function() {
+
     //若已存在，则使用之前存在的版本
     if (window.AForm) {
         if (typeof module === "object" && module.exports) {
@@ -13,7 +14,6 @@
 
         return window.AForm;
     }
-
     /** 常量 */
     var AFORM_SYS_PLUGIN = "__AFORM_SYS_PLUGIN__";
     var AFORM_BASIC_PLUGIN = "__AFORM_BASIC_PLUGIN__";
@@ -1120,37 +1120,54 @@
 
             var html = [];
 			//LTX
+
 			html.push("<div class='col-sm-9'>");
             if (fd.jtype == "Boolean") {
                 html.push("<input " + attrHtml + " id=\"" + elementId + "\" type=\"checkbox\" " +
                     (value ? "checked" : "") + " " + attrName + " />");
             } else {
                 switch (fd.type) {
-					case "date":
+                    case "time":
+                        html.push("<input data-gen='aform' ");
+                        var full="jpath='.基本信息.结束日期' class='json-field-input form-control text'style='width:100%;'";
+                        attrHtml.replace("calendar", "text");
+                        //alert(full)
+                        html.push(full);
+                        html.push(" id='");
+                        html.push(elementId + "'");
+                        html.push(attrName);
+
+                        // html.push('   type="time"');
+                        html.push('   onclick="$.calendar({ format:\'yyyy-MM-dd HH-mm\'})"');
+                        html.push(" value=\"" + value + "\" />");
+
+                        html.push("</div>");
+
+
+                        _eventSetter["blur"][elementId] = function(e) {
+                            var ip = _h.getTarget(e);
+                            _formHelper.validateInput(ip, fd, afObj);
+                        };
+                        break;
+                   case "date":
 						html.push("<input data-gen='aform' ");
 						var full="jpath='.基本信息.结束日期' class='json-field-input form-control text'style='width:100%;'";
-						attrHtml.replace("calender", "text")
-						
-						
+						attrHtml.replace("calendar", "text");
 						//alert(full)
                         html.push(full);
                         html.push(" id='");
                         html.push(elementId + "'");
                         html.push(attrName);
 
-						//html.push('   type="text"');
-						html.push('   onclick="J.calendar.get()"');
-
-                        html.push(" value=\"" + value + "\" />");
-						html.push("</div>");
-						
+                       // html.push('   type="date"');
+                       html.push('   onclick="$.calendar()"');
+                       html.push(" value=\"" + value + "\" />");
+                       html.push("</div>");
                         _eventSetter["blur"][elementId] = function(e) {
                             var ip = _h.getTarget(e);
                             _formHelper.validateInput(ip, fd, afObj);
                         };
-
                         break;
-					
                     case "text":
                     default:
 

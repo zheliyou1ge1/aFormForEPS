@@ -7,8 +7,7 @@
     	"野外编号":{"inline": true,"width":"100%"},
 
 			"开钻日期":{"inline":true,"width":"100%","type":"date"},
-			"开钻日期2":{"inline":true,"width":"100%","type":"date1"},
-			"结束日期":{"inline":true,"width":"100%","type":"date"},
+			"结束日期":{"inline":true,"width":"100%","type":"time"},
 			"记录人":{"inline":true,"width":"100%"},
 			"审核人":{"inline":true,"width":"100%"},
 			"司钻人":{"inline":true,"width":"100%"},

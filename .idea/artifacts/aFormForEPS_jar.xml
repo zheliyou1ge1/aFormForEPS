@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="aFormForEPS:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/aFormForEPS_jar</output-path>
+    <root id="archive" name="aFormForEPS.jar">
+      <element id="module-output" name="aFormForEPS" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/lib/sqlite-jdbc-3.7.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/lib/gson-2.8.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

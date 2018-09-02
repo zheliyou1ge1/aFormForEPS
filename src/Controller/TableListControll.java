@@ -131,14 +131,15 @@ public class TableListControll {
                     return rs.getString(Fields);
                 }
             });
-            if(sList.get(0)!=null)
+            if(sList.size()<=0)
+            {
+                System.out.println(Fields+"字段为空");
+                return "";
+            }else
             {
                 ret=sList.get(0);
                 System.out.println(Main.Type+"_"+Main.id+"的"+Fields+"："+sList.get(0));
-            }else
-            {
-                System.out.println("字段为空");
-                return "";
+
             }
         }catch (Exception e) {
             e.printStackTrace();
