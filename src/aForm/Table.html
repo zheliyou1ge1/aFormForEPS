@@ -33,7 +33,6 @@
 		}
 		body {
 			background-color:#FAFAFA;
-			font-family: 微软雅黑;
 		}
 		#sonbody td:nth-child(3n+0){
 			text-align: right;
@@ -56,7 +55,7 @@
 			}
 		}
 
-	.fixed{
+		.fixed{
 			position: fixed;
 			bottom: 25px;
 			right: 10px;
@@ -79,7 +78,6 @@
 	<script src="bootstrap/js/bootstrap.js"></script>
 	<script type="text/javascript" src="lhgcore.js"></script>
 	<script type="text/javascript" src="lhgcalendar.js"></script>
-	<script src="../../../../../../../../0901老aform备份-勿删/aForm/aform.config.js"></script>
 </head>
 
 <body  scroll="no" >
@@ -156,93 +154,10 @@
 
 <script type="text/javascript">
 
-//	load();
 	function load() {
         var value=tableControll.getFormValue();
         var fields=tableControll.getFormFields();
         cbGenForm(value,fields);
-//         cbGenForm({
-// 		"tablename":"point_t1.fields",
-//         "0·6":"",
-//         "野外编号":"",
-//
-//         "基本信息":{
-//             "开钻日期":"",
-//             "开钻日期2":"",
-//             "结束日期":"",
-//             "记录人":"",
-//             "审核人":"",
-//             "司钻人":"",
-//             "机长":"",
-//             "项目负责人":"",
-//             "施工单位":""
-//         },
-//         "详细信息":{
-//             "地理位置":"",
-//             "X坐标":"",
-//             "Y坐标":"",
-//             "高程":"",
-//             "经度":"",
-//             "纬度":"",
-//             "钻机类型":"",
-//             "钻孔类型":"",
-//             "井斜":"",
-//             "开孔直径(mm)":"",
-//             "终孔直径(mm)":"",
-//             "终孔深度(m)":"",
-//             "成井深度(m)":"",
-//             "初见水位(m)":"",
-//             "静止水位(m)":"",
-//             "质量等级":"",
-//             "岩芯采取率(%)":"",
-//             "钻孔级别(建模使用)":"",
-//             "含水层特征":"",
-//             "取样情况":""
-//         }
-// },{
-//     "fields":
-//     {
-// 		"钻孔综合记录表":{},
-//     	"tablename":{"cssText":"display: none;"},
-//         "0·6":{"inline": true,"width":"100%","type":"number","label":"统一编号"},
-//     	"野外编号":{"inline": true,"width":"100%","cssText":"","type":"number","label":"野外编号"},
-//
-// 			"开钻日期":{"inline":true,"width":"100%","type":"date"},
-// 			"开钻日期2":{"inline":true,"width":"100%","type":"time"},
-// 			"结束日期":{"inline":true,"width":"100%","type":"date"},
-// 			"记录人":{"inline":true,"width":"100%"},
-// 			"审核人":{"inline":true,"width":"100%"},
-// 			"司钻人":{"inline":true,"width":"100%"},
-// 			"机长":{"inline":true,"width":"100%"},
-// 			"项目负责人":{"inline":true,"width":"100%","type": "checkbox","datalist": ["项目负责人a", "项目负责人b", "项目负责人c","项目负责人a", "项目负责人b", "项目负责人c","项目负责人a", "项目负责人b", "项目负责人c","项目负责人a", "项目负责人b", "项目负责人c","项目负责人a", "项目负责人b", "项目负责人c", "项目负责人b", "项目负责人c","项目负责人a", "项目负责人b", "项目负责人c","项目负责人a", "项目负责人b", "项目负责人c"]},
-// 			"施工单位":{"inline":true,"width":"100%"},
-//
-//
-//
-// 			"地理位置":{"inline":true,"width":"100%"},
-// 			"X坐标":{"inline":true,"width":"100%"},
-// 			"Y坐标":{"inline":true,"width":"100%"},
-// 			"高程":{"inline":true,"width":"100%"},
-// 			"经度":{"inline":true,"width":"100%"},
-// 			"纬度":{"inline":true,"width":"100%"},
-// 			"钻机类型":{"inline":true,"width":"100%"},
-// 			"钻孔类型":{"inline":true,"width":"100%"},
-// 			"井斜":{"inline":true,"width":"100%"},
-// 			"开孔直径(mm)":{"inline":true,"width":"100%"},
-// 			"终孔直径(mm)":{"inline":true,"width":"100%"},
-// 			"终孔深度(m)":{"inline":true,"width":"100%"},
-// 			"成井深度(m)":{"inline":true,"width":"100%"},
-// 			"初见水位(m)":{"inline":true,"width":"100%"},
-// 			"静止水位(m)":{"inline":true,"width":"100%"},
-// 			"质量等级":{"inline":true,"width":"100%"},
-// 			"岩芯采取率(%)":{"inline":true,"width":"100%"},
-// 			"钻孔级别(建模使用)":{"inline":true,"width":"100%"},
-// 			"含水层特征":{"inline":true,"width":"100%"},
-// 			"取样情况":{"inline":true,"width":"100%"}
-//
-//     }
-// }
-// );
         subTabListDivOnload();
     }
 

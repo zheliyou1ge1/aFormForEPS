@@ -98,9 +98,13 @@ public class FileUtil {
 
     public static void saveFile(String toSaveString, String filePath)  throws Exception{
         File saveFile = new File(filePath);
-        FileOutputStream fos = new FileOutputStream(saveFile);
-        fos.write(toSaveString.getBytes());
-        fos.close();
+//        FileOutputStream fos = new FileOutputStream(saveFile);
+//        fos.write(toSaveString.getBytes());
+//        fos.close();
+
+        OutputStreamWriter oStreamWriter = new OutputStreamWriter(new FileOutputStream(saveFile), "utf-8");
+        oStreamWriter.append(toSaveString);
+        oStreamWriter.close();
 
     }
     public static boolean hasSubTable(String selectName)
