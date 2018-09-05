@@ -36,7 +36,7 @@ public class TableList extends Region  {
                 icon.setImage(icon.getImage().getScaledInstance(50, 50,Image.SCALE_DEFAULT ));
                 jlb.setIcon(icon);
                 jlb.setSize(50, 50);
-                JOptionPane.showMessageDialog(JOptionPane.getRootFrame(), wEvent.getData(),"",JOptionPane.INFORMATION_MESSAGE,icon);
+                JOptionPane.showMessageDialog(Main.frame, wEvent.getData(),"",JOptionPane.INFORMATION_MESSAGE,icon);
             });
             TableListHtmlUrl = url.toExternalForm();
         }catch (Exception e)
@@ -59,8 +59,6 @@ public class TableList extends Region  {
                         JSObject window = (JSObject) tableListWebEngine.executeScript("window");
                         window.setMember("tableListControll",Main.tableListControll);
                         tableListWebEngine.executeScript("load()");
-                        //tableWebEngine.executeScript("exeJs2Form()");
-                        //webEngine.executeScript("subTabListDivOnload()");
                     }
                 });
         tableListWebEngine.load(TableListHtmlUrl);

@@ -64,7 +64,7 @@ public class Table extends Region  {
                 icon.setImage(icon.getImage().getScaledInstance(50, 50,Image.SCALE_DEFAULT ));
                 jlb.setIcon(icon);
                 jlb.setSize(50, 50);
-                JOptionPane.showMessageDialog(JOptionPane.getRootFrame(), wEvent.getData(),"",JOptionPane.INFORMATION_MESSAGE,icon);
+                JOptionPane.showMessageDialog(Main.frame, wEvent.getData(),"",JOptionPane.INFORMATION_MESSAGE,icon);
             });
             TableHtmlUrl = url.toExternalForm();
         }catch (Exception e)

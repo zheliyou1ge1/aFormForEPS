@@ -26,6 +26,7 @@ public class Main extends Application {
     public static String id;
     public static String Path;
 
+    public static Frame frame = new Frame();
     public static Stage PublicStage;
     public static String OpenTableName;
     public static String OpenSubTableName;
@@ -49,8 +50,9 @@ public class Main extends Application {
             Path=args[2];
         }catch (Exception e)
         {
-
+            System.out.println("EPS参数错误！");
         }
+
         launch(args);
     }
 
@@ -63,7 +65,6 @@ public class Main extends Application {
         }
 
         PublicStage=stage;
-        Frame frame = new Frame();
         frame.getState();
         stage.setTitle("云南地质大数据");
         String filepath = "/aForm/images/edit.png";

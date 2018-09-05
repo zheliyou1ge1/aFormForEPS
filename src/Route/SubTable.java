@@ -47,7 +47,7 @@ public class SubTable extends Region  {
                 jlb.setIcon(icon);
                 jlb.setSize(50, 50);
 
-                JOptionPane.showMessageDialog(JOptionPane.getRootFrame(),wEvent.getData(),"",JOptionPane.INFORMATION_MESSAGE,icon);
+                JOptionPane.showMessageDialog(Main.frame,wEvent.getData(),"",JOptionPane.INFORMATION_MESSAGE,icon);
 
             });
             TableHtmlUrl = url.toExternalForm();
