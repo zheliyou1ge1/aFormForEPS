@@ -76,8 +76,8 @@
 
 	<script src="bootstrap/js/jquery.min.js"></script>
 	<script src="bootstrap/js/bootstrap.js"></script>
-	<script type="text/javascript" src="lhgcore.js"></script>
-	<script type="text/javascript" src="lhgcalendar.js"></script>
+	<script type="text/javascript" src="bootstrap/js/lhgcore.js"></script>
+	<script type="text/javascript" src="bootstrap/js/lhgcalendar.js"></script>
 </head>
 
 <body  scroll="no" >
@@ -139,7 +139,7 @@
 </div>
 
 <div class="fixed">
-	<a href="#top"><img src="./img/icon_top.png" alt=""></a>
+	<a href="#top"><img src="./images/icon_top.png" alt=""></a>
 </div>
 
 
@@ -149,7 +149,7 @@
 <link href="aform.css" rel="stylesheet" type="text/css" />
 <script src="aform.js" type="text/javascript"></script>
 <script src="aform.config.js" type="text/javascript"></script>
-<script src="aform.plugin.js" type="text/javascript"></script>
+
 
 
 <script type="text/javascript">
@@ -221,8 +221,9 @@
 		//1成功
         if(sava=1)
 		{
-            alert("保存成功")
-            load();
+            alert("保存成功");
+			tableControll.backToTableList();
+            //load();
 		}else{
             alert("保存失败")
 		}

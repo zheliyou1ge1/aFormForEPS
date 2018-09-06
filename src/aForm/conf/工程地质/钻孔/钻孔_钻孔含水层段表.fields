@@ -1,10 +1,17 @@
 {
-    "fields":
-    {
-    	"钻孔含水层段表":{},
-		"tablename":{"cssText":"display: none;"},
-    	"统一编号":{inline:true,"width":"100%",type:"number"}
+	"fields": {
+		"钻孔含水层段表": {},
+		"tablename": {
+			"cssText": "display: none;"
+		},
+		"统一编号": {
+			"inline": true,
+			"width": "100%",
+			"required": true
+		},
+		"subTable": {
+			"cssText": "display: none;"
+		}
 
-
-    }
+	}
 }

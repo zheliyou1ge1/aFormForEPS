@@ -36,7 +36,8 @@
 			"岩芯采取率(%)":{"inline":true,"width":"100%"},
 			"钻孔级别(建模使用)":{"inline":true,"width":"100%"},
 			"含水层特征":{"inline":true,"width":"100%"},
-			"取样情况":{"inline":true,"width":"100%"}
+			"取样情况":{"inline":true,"width":"100%"},
+		"subTable":{"cssText":"display: none;"}
 		
     }
 }

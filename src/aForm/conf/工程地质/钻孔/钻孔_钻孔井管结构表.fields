@@ -3,6 +3,8 @@
     {
     	"钻孔井管结构表":{},
 		"tablename":{"cssText":"display: none;"},
-		"统一编号":{inline:true,"width":"100%"}
-    }
+		"统一编号":{inline:true,"width":"100%","required": true}
+    ,
+		"subTable":{"cssText":"display: none;"}
+		}
 }
