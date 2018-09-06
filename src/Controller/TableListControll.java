@@ -143,7 +143,7 @@ public class TableListControll {
             }
         }catch (Exception e) {
             e.printStackTrace();
-            onCatch();
+            //onCatch();
         }
         return ret;
     }

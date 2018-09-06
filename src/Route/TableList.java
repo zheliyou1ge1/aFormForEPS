@@ -23,10 +23,7 @@ public class TableList extends Region  {
     public TableList() {
         String TableListHtmlUrl="";
         try {
-            System.out.println("jar包路径:"+Main.classPath);
             URL url = new URL("file://"+Main.classPath+ "/aForm/TableList.html");
-            System.out.println("html路径:"+url.getPath());
-
             //添加alert映射
             tableListWebEngine.setOnAlert((WebEvent<String> wEvent) -> {
                 //System.out.println( wEvent.getData());

@@ -287,9 +287,15 @@
     function addSonTab()
     {
         //addSonTab("point_1-point_t1")
-        tableControll.addSubTable();
+        var flag=tableControll.addSubTable();
+        if(flag==1)
+		{
+            reload();
+		}else {
+            alert("没有子表")
+		}
         //刷新页面避免返回后显示不了增加的子表
-        reload();
+
     }
     function getSubTabValue(name, idx)
     {
